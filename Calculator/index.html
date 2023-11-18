@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html>
+  <head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 5px; 
+        }
+        button {
+            padding: 10px 25px;
+            margin: 10px
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        input[type="text"] {
+            padding: 7px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+    </style>
+  </head>
+
+  <body>
+    <h1>Hesap Makinesi</h1> <br> <br>
+    <input id="result" type="text" disabled />
+
+    <button type="button" onclick="clearDisplay()" >C</button>
+    <br><br>
+
+    <button  type="button" onclick="appendNumber('1')">1</button>
+    <button type="button" onclick="appendNumber('2')">2</button>
+    <button  type="button" onclick="appendNumber('3')">3</button>
+    <button  type="button"onclick="appendOperator('/')">/</button> <br><br>
+    <button type="button" onclick="appendNumber('4')">4</button>
+    <button  type="button" onclick="appendNumber('5')">5</button>
+    <button  type="button" onclick="appendNumber('6')">6</button>
+    <button  type="button" onclick="appendOperator('-') " >-</button> <br> <br>
+    <button  type="button" onclick="appendNumber('7')">7</button>
+    <button  type="button" onclick="appendNumber('8')">8</button>
+    <button  type="button" onclick="appendNumber('9')">9</button> 
+    <button  type="button" onclick="appendOperator('+')">+</button><br> <br>
+    <button  type="button" onclick="appendDecimal('.')" >.</button>
+    <button  type="button" onclick="appendNumber('0')">0</button>
+    <button  type="button" onclick="calculate('=')">=</button>
+    <button  type="button" onclick="appendNumber('*')">*</button>
+
+    <script>
+      function appendNumber(value){
+        document.getElementById("result").value += value;
+      }
+      function appendOperator(operator){
+        document.getElementById("result").value += operator 
+      }
+      function appendDecimal() {
+            var currentDisplay = document.getElementById("result").value;
+            if (currentDisplay.indexOf('.') === -1) {
+                document.getElementById("result").value += '.';
+            }
+        }
+
+        function calculate() {
+            var result = eval(document.getElementById("result").value);
+            document.getElementById("result").value = result;
+        }
+
+        function clearDisplay() {
+            document.getElementById("result").value = '';
+        }
+    
+    </script>
+    
+  </body>
+</html>
