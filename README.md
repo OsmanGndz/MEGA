@@ -1,6 +1,6 @@
 # MEGACALCULATER
 
-In this project, a calculator that can perform simple operations with whole and decimal numbers was created entirely using HTML.
+In this project, a calculator that can perform simple operations with whole and decimal numbers was created using HTML.
 
 ### Our calculator does not have below feature:
 - It does not have operator precedence, so when we use more than one operator in calculation process, it can give wrong answer.
