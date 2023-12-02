@@ -1,0 +1,41 @@
+/* Add your styles here */
+div#kutukapsa{
+  width:330px;
+  height:330px;
+  border:4px double brown;
+  background-color: yellow;
+  margin:5px;
+  display: flex;
+  /*direction: rtl;*/
+  /*flex-direction: row-reverse;*/
+  flex-wrap: wrap;
+}
+
+div.kutu{
+  width:100px;
+  height:100px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  line-height: 100px;
+  margin: 5px;
+  border: 4px double brown;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap:wrap;
+
+}
+
+div.kutu1{
+  width:29px;
+  height:29px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  line-height: 28px;
+  border: 1px solid black;
+
+}
+
+
+
